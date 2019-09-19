@@ -23,17 +23,17 @@ let addPost = async (req, res) => {
     }
 }
 
-let deletePost = async (req, res) => {
-    const db = req.app.get('db');
-    const {topicID, postID} = req.body
+// let deletePost = async (req, res) => {
+//     const db = req.app.get('db');
+//     const {topicID, postID} = req.body
 
-    const posts = await db.posts.deletePost(topicID, postID);
-    res.status(200).json(posts)
-}
+//     const posts = await db.posts.deletePost(topicID, postID);
+//     res.status(200).json(posts)
+// }
 
 module.exports = {
     topics,
     posts,
-    addPost,
-    deletePost
+    addPost
+    // deletePost
 }

@@ -7,7 +7,8 @@ const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 
 //controllers
 const {getUser, register, login, logout} = require('./controllers/authController');
-const {topics, posts, addPost, deletePost} = require('./controllers/postsController');
+const {topics, posts, addPost} = require('./controllers/postsController');
+// , deletePost
 
 //middleware
 //to use req.body
@@ -39,7 +40,7 @@ app.post('/auth/logout', logout);
 app.get('/api/topics', topics);
 app.get('/api/posts/:topicID', posts);
 app.post('/api/posts/', addPost);
-app.delete('/api/posts/', deletePost);
+// app.delete('/api/posts/', deletePost);
 
 
 app.listen(SERVER_PORT, () => console.log(`Server listening on port ${SERVER_PORT}`));
