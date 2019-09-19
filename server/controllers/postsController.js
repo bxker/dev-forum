@@ -1,8 +1,8 @@
-let getForums = (req, res) => {
+let topics = (req, res) => {
 
 }
 
-let getPosts = (req, res) => {
+let posts = (req, res) => {
 
 }
 
@@ -15,8 +15,8 @@ let deletePost = (req, res) => {
 }
 
 module.exports = {
-    getForums,
-    getPosts,
+    topics,
+    posts,
     addPost,
     deletePost
 }
