@@ -6,7 +6,6 @@ let getUser = async (req, res) => {
     }else {
         res.status(401).json('No user logged in')
     }
-    
 }   
 
 let register = async (req, res) => {
@@ -53,8 +52,6 @@ let login = async (req, res) => {
 
             res.status(200).json(req.session.user);
         }
-
-
     }
 }
 
